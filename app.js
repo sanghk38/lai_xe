@@ -7,6 +7,7 @@ class QuizApp {
         this.questions = QUESTIONS_DATA;
         this.answers = CORRECT_ANSWERS;
         this.criticalQuestions = CRITICAL_QUESTIONS;
+        this.questionImages = typeof QUESTION_IMAGES !== 'undefined' ? QUESTION_IMAGES : {};
         
         // Study state
         this.studyIndex = 0;
@@ -243,6 +244,9 @@ class QuizApp {
         // Question text
         document.getElementById('study-question-text').textContent = q.question;
         
+        // Question images
+        this.renderQuestionImages('study-images', q.id);
+        
         // Options
         const optionsContainer = document.getElementById('study-options');
         optionsContainer.innerHTML = '';
@@ -442,6 +446,9 @@ class QuizApp {
         document.getElementById('exam-badge').textContent = `Câu ${this.examCurrentIndex + 1}`;
         document.getElementById('exam-question-text').textContent = q.question;
         
+        // Question images
+        this.renderQuestionImages('exam-images', q.id);
+        
         // Show critical badge
         const criticalBadge = document.getElementById('exam-critical-badge');
         if (this.criticalQuestions.includes(q.id)) {
@@ -613,18 +620,68 @@ class QuizApp {
             
             let statusIcon = isCorrect ? '✅' : (userAnswer === undefined ? '⏭️' : '❌');
             
+            // Build images HTML for review
+            let imagesHtml = this.getImagesHtml(q.id);
+            
             card.innerHTML = `
                 <div class="question-badge">Câu ${i + 1} ${statusIcon}</div>
                 ${criticalBadge}
                 <h3 class="question-text">${q.question}</h3>
+                <div class="question-images">${imagesHtml}</div>
                 <div class="options-list">${optionsHtml}</div>
             `;
+            
+            // Add lightbox to review images
+            card.querySelectorAll('.question-images img').forEach(img => {
+                img.addEventListener('click', () => this.openLightbox(img.src));
+            });
             
             reviewList.appendChild(card);
         });
         
         // Scroll to review
         reviewContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // ============ Image Rendering ============
+    renderQuestionImages(containerId, questionId) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = '';
+        
+        const images = this.questionImages[questionId];
+        if (!images || images.length === 0) return;
+        
+        images.forEach(imgFile => {
+            const img = document.createElement('img');
+            img.src = `images/${imgFile}`;
+            img.alt = `Hình minh họa câu ${questionId}`;
+            img.loading = 'lazy';
+            img.addEventListener('click', () => this.openLightbox(img.src));
+            container.appendChild(img);
+        });
+    }
+
+    getImagesHtml(questionId) {
+        const images = this.questionImages[questionId];
+        if (!images || images.length === 0) return '';
+        
+        return images.map(imgFile => 
+            `<img src="images/${imgFile}" alt="Hình minh họa câu ${questionId}" loading="lazy" style="cursor:pointer">`
+        ).join('');
+    }
+
+    openLightbox(src) {
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = `<img src="${src}" alt="Phóng to hình ảnh">`;
+        lightbox.addEventListener('click', () => lightbox.remove());
+        document.addEventListener('keydown', function handler(e) {
+            if (e.key === 'Escape') {
+                lightbox.remove();
+                document.removeEventListener('keydown', handler);
+            }
+        });
+        document.body.appendChild(lightbox);
     }
 
     // ============ Stats View ============

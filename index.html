@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ôn thi lý thuyết lái xe hạng A1 - Bộ 250 câu hỏi theo Luật Mới 2025. Luyện thi trắc nghiệm, thi thử online miễn phí.">
+    <title>Ôn Thi Bằng Lái Xe A1 - 250 Câu Hỏi Luật Mới 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="14" stroke="url(#grad1)" stroke-width="2.5"/>
+                        <path d="M10 16L14 20L22 12" stroke="url(#grad1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="grad1" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#6366f1"/>
+                                <stop offset="100%" stop-color="#8b5cf6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">A1 Quiz</span>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn active" data-view="home" id="nav-home">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    Trang chủ
+                </button>
+                <button class="nav-btn" data-view="study" id="nav-study">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    Học tập
+                </button>
+                <button class="nav-btn" data-view="exam" id="nav-exam">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Thi thử
+                </button>
+                <button class="nav-btn" data-view="stats" id="nav-stats">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    Thống kê
+                </button>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" title="Chuyển đổi giao diện">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="sun-icon"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="moon-icon" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home View -->
+        <section class="view active" id="view-home">
+            <div class="hero">
+                <div class="hero-badge">Luật Mới 2025</div>
+                <h1 class="hero-title">Ôn Thi Bằng Lái Xe <span class="gradient-text">Hạng A1</span></h1>
+                <p class="hero-subtitle">Bộ 250 câu hỏi sát hạch lý thuyết theo quy định mới nhất. Học tập thông minh, thi thử như thật.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg" onclick="app.switchView('study')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                        Bắt đầu học
+                    </button>
+                    <button class="btn btn-outline btn-lg" onclick="app.startExam()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Thi thử ngay
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Stats Cards -->
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="totalQuestions">250</span>
+                        <span class="stat-label">Tổng câu hỏi</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="learnedCount">0</span>
+                        <span class="stat-label">Đã thuộc</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="examsTaken">0</span>
+                        <span class="stat-label">Lần thi thử</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon amber">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="bestScore">--</span>
+                        <span class="stat-label">Điểm cao nhất</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter Cards -->
+            <h2 class="section-title">Chương trình học</h2>
+            <div class="chapter-grid">
+                <div class="chapter-card" onclick="app.studyChapter(1)">
+                    <div class="chapter-number">I</div>
+                    <div class="chapter-content">
+                        <h3>Quy định chung & Quy tắc GTĐB</h3>
+                        <p>100 câu hỏi về luật giao thông đường bộ cơ bản</p>
+                        <div class="chapter-progress">
+                            <div class="progress-bar"><div class="progress-fill" id="ch1-progress"></div></div>
+                            <span class="progress-text" id="ch1-text">0/100</span>
+                        </div>
+                    </div>
+                    <div class="chapter-arrow">→</div>
+                </div>
+                <div class="chapter-card" onclick="app.studyChapter(2)">
+                    <div class="chapter-number">II</div>
+                    <div class="chapter-content">
+                        <h3>Văn hóa GT, Đạo đức & Cứu hộ</h3>
+                        <p>10 câu hỏi về văn hóa giao thông, phòng cháy chữa cháy</p>
+                        <div class="chapter-progress">
+                            <div class="progress-bar"><div class="progress-fill" id="ch2-progress"></div></div>
+                            <span class="progress-text" id="ch2-text">0/10</span>
+                        </div>
+                    </div>
+                    <div class="chapter-arrow">→</div>
+                </div>
+                <div class="chapter-card" onclick="app.studyChapter(3)">
+                    <div class="chapter-number">III</div>
+                    <div class="chapter-content">
+                        <h3>Kỹ thuật lái xe</h3>
+                        <p>15 câu hỏi về kỹ thuật lái xe mô tô an toàn</p>
+                        <div class="chapter-progress">
+                            <div class="progress-bar"><div class="progress-fill" id="ch3-progress"></div></div>
+                            <span class="progress-text" id="ch3-text">0/15</span>
+                        </div>
+                    </div>
+                    <div class="chapter-arrow">→</div>
+                </div>
+                <div class="chapter-card" onclick="app.studyChapter(4)">
+                    <div class="chapter-number">IV</div>
+                    <div class="chapter-content">
+                        <h3>Báo hiệu đường bộ</h3>
+                        <p>90 câu hỏi về biển báo, vạch kẻ đường, tín hiệu đèn</p>
+                        <div class="chapter-progress">
+                            <div class="progress-bar"><div class="progress-fill" id="ch4-progress"></div></div>
+                            <span class="progress-text" id="ch4-text">0/90</span>
+                        </div>
+                    </div>
+                    <div class="chapter-arrow">→</div>
+                </div>
+                <div class="chapter-card" onclick="app.studyChapter(5)">
+                    <div class="chapter-number">V</div>
+                    <div class="chapter-content">
+                        <h3>Sa hình & Xử lý tình huống</h3>
+                        <p>35 câu hỏi về giải thế sa hình, tình huống giao thông</p>
+                        <div class="chapter-progress">
+                            <div class="progress-bar"><div class="progress-fill" id="ch5-progress"></div></div>
+                            <span class="progress-text" id="ch5-text">0/35</span>
+                        </div>
+                    </div>
+                    <div class="chapter-arrow">→</div>
+                </div>
+            </div>
+
+            <!-- Exam Info -->
+            <div class="exam-info-card">
+                <h3>📋 Thông tin kỳ thi sát hạch A1</h3>
+                <div class="exam-info-grid">
+                    <div class="info-item">
+                        <span class="info-icon">📝</span>
+                        <span class="info-text"><strong>25 câu</strong> / đề thi</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⏱️</span>
+                        <span class="info-text"><strong>19 phút</strong> làm bài</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">✅</span>
+                        <span class="info-text">Đạt <strong>21/25</strong> câu</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⚠️</span>
+                        <span class="info-text"><strong>Không sai</strong> câu điểm liệt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Study View -->
+        <section class="view" id="view-study">
+            <div class="study-header">
+                <div class="study-info">
+                    <h2 id="study-title">Chế độ học tập</h2>
+                    <p id="study-subtitle">Chọn chương để bắt đầu học hoặc học tất cả</p>
+                </div>
+                <div class="study-controls">
+                    <select id="chapterFilter" class="select-field" onchange="app.filterChapter(this.value)">
+                        <option value="0">Tất cả chương</option>
+                        <option value="1">Chương I - Quy định chung</option>
+                        <option value="2">Chương II - Văn hóa GT</option>
+                        <option value="3">Chương III - Kỹ thuật lái xe</option>
+                        <option value="4">Chương IV - Biển báo</option>
+                        <option value="5">Chương V - Sa hình</option>
+                    </select>
+                    <button class="btn btn-sm btn-outline" onclick="app.shuffleStudy()" title="Xáo trộn câu hỏi">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+                        Xáo trộn
+                    </button>
+                </div>
+            </div>
+            
+            <div class="study-progress-bar">
+                <div class="study-progress-info">
+                    <span id="study-current">Câu 1</span>
+                    <span id="study-total">/ 250</span>
+                </div>
+                <div class="progress-bar full-width">
+                    <div class="progress-fill" id="study-progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="question-card" id="study-question-card">
+                <div class="question-badge" id="study-badge">Câu 1</div>
+                <div class="question-chapter-badge" id="study-chapter-badge">Chương I</div>
+                <h3 class="question-text" id="study-question-text"></h3>
+                <div class="options-list" id="study-options"></div>
+                <div class="question-explanation" id="study-explanation" style="display:none">
+                    <div class="explanation-header">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        Đáp án đúng
+                    </div>
+                    <p id="study-explanation-text"></p>
+                </div>
+            </div>
+
+            <div class="study-nav">
+                <button class="btn btn-outline" id="study-prev" onclick="app.studyPrev()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    Câu trước
+                </button>
+                <button class="btn btn-primary" id="study-check" onclick="app.checkStudyAnswer()">
+                    Kiểm tra
+                </button>
+                <button class="btn btn-outline" id="study-next" onclick="app.studyNext()">
+                    Câu sau
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Exam View -->
+        <section class="view" id="view-exam">
+            <!-- Exam Setup -->
+            <div id="exam-setup" class="exam-setup">
+                <div class="exam-setup-card">
+                    <div class="exam-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="url(#examGrad)" stroke-width="1.5">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                            <defs>
+                                <linearGradient id="examGrad" x1="0" y1="0" x2="24" y2="24">
+                                    <stop offset="0%" stop-color="#6366f1"/>
+                                    <stop offset="100%" stop-color="#ec4899"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h2>Thi Thử Sát Hạch A1</h2>
+                    <p>Mô phỏng bài thi thật với 25 câu hỏi ngẫu nhiên trong 19 phút</p>
+                    <div class="exam-rules">
+                        <div class="rule-item">
+                            <span class="rule-icon">📝</span>
+                            <span>25 câu hỏi ngẫu nhiên</span>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-icon">⏱️</span>
+                            <span>Thời gian: 19 phút</span>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-icon">✅</span>
+                            <span>Đạt: 21/25 câu trở lên</span>
+                        </div>
+                        <div class="rule-item warning">
+                            <span class="rule-icon">⚠️</span>
+                            <span>Sai câu điểm liệt = Trượt ngay</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg" onclick="app.startExam()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Bắt đầu thi
+                    </button>
+                </div>
+            </div>
+
+            <!-- Exam In Progress -->
+            <div id="exam-progress" style="display:none">
+                <div class="exam-top-bar">
+                    <div class="exam-timer" id="exam-timer">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span id="exam-time">19:00</span>
+                    </div>
+                    <div class="exam-counter">
+                        <span id="exam-answered">0</span>/<span id="exam-total-q">25</span> đã trả lời
+                    </div>
+                    <button class="btn btn-sm btn-danger" onclick="app.submitExam()">Nộp bài</button>
+                </div>
+
+                <div class="exam-question-nav" id="exam-question-nav"></div>
+
+                <div class="question-card" id="exam-question-card">
+                    <div class="question-badge" id="exam-badge">Câu 1</div>
+                    <div class="question-chapter-badge critical" id="exam-critical-badge" style="display:none">⚠️ Câu điểm liệt</div>
+                    <h3 class="question-text" id="exam-question-text"></h3>
+                    <div class="options-list" id="exam-options"></div>
+                </div>
+
+                <div class="study-nav">
+                    <button class="btn btn-outline" onclick="app.examPrev()">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                        Câu trước
+                    </button>
+                    <button class="btn btn-outline" onclick="app.examNext()">
+                        Câu sau
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Exam Result -->
+            <div id="exam-result" style="display:none">
+                <div class="result-card">
+                    <div class="result-icon" id="result-icon"></div>
+                    <h2 class="result-title" id="result-title"></h2>
+                    <p class="result-subtitle" id="result-subtitle"></p>
+                    
+                    <div class="result-stats">
+                        <div class="result-stat">
+                            <span class="result-stat-value" id="result-correct">0</span>
+                            <span class="result-stat-label">Đúng</span>
+                        </div>
+                        <div class="result-stat">
+                            <span class="result-stat-value" id="result-wrong">0</span>
+                            <span class="result-stat-label">Sai</span>
+                        </div>
+                        <div class="result-stat">
+                            <span class="result-stat-value" id="result-skip">0</span>
+                            <span class="result-stat-label">Bỏ qua</span>
+                        </div>
+                        <div class="result-stat">
+                            <span class="result-stat-value" id="result-time">--:--</span>
+                            <span class="result-stat-label">Thời gian</span>
+                        </div>
+                    </div>
+
+                    <div class="result-detail" id="result-critical" style="display:none">
+                        <span class="result-critical-text">⚠️ Sai câu điểm liệt!</span>
+                    </div>
+
+                    <div class="result-actions">
+                        <button class="btn btn-primary" onclick="app.reviewExam()">Xem lại đáp án</button>
+                        <button class="btn btn-outline" onclick="app.startExam()">Thi lại</button>
+                    </div>
+                </div>
+
+                <!-- Review Section -->
+                <div id="exam-review" style="display:none">
+                    <h3 class="section-title">Xem lại đáp án</h3>
+                    <div id="review-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats View -->
+        <section class="view" id="view-stats">
+            <h2 class="section-title">Thống kê học tập</h2>
+            <div class="stats-grid">
+                <div class="big-stat-card">
+                    <h3>Tiến độ tổng quan</h3>
+                    <div class="circular-progress" id="overall-progress">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="54" fill="none" stroke="var(--border-color)" stroke-width="8"/>
+                            <circle cx="60" cy="60" r="54" fill="none" stroke="url(#progressGrad)" stroke-width="8" stroke-linecap="round" stroke-dasharray="339.3" stroke-dashoffset="339.3" id="progress-circle" transform="rotate(-90 60 60)"/>
+                            <defs>
+                                <linearGradient id="progressGrad" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#6366f1"/>
+                                    <stop offset="100%" stop-color="#8b5cf6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="progress-center">
+                            <span class="progress-percent" id="progress-percent">0%</span>
+                            <span class="progress-label">hoàn thành</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="big-stat-card">
+                    <h3>Lịch sử thi thử</h3>
+                    <div id="exam-history" class="exam-history">
+                        <p class="empty-state">Chưa có lần thi thử nào</p>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-actions">
+                <button class="btn btn-danger btn-sm" onclick="app.resetProgress()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                    Xóa toàn bộ tiến trình
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="questions_data.js"></script>
+    <script src="answers_data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -32,7 +32,7 @@ const CORRECT_ANSWERS = {
     26: 2,  // Năm nhóm biển
     27: 1,  // Quan sát, giảm tốc độ hoặc dừng lại
     28: 3,  // Cả ba ý trên
-    29: 2,  // Phía trước và phía sau dừng lại; trái phải được đi
+    29: 3,  // Phía trước và phía sau dừng lại; trái phải được đi
     30: 2,  // Tất cả các hướng phải dừng lại, trừ xe đã trong khu vực giao nhau
     31: 0,  // Theo hiệu lệnh người điều khiển giao thông
     32: 1,  // Biển báo hiệu tạm thời

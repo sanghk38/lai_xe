@@ -1,39 +1,9 @@
 const QUESTION_IMAGES = {
-  "26": [
-    "page_6.jpg"
-  ],
-  "27": [
-    "page_6.jpg"
-  ],
-  "28": [
-    "page_6.jpg"
-  ],
   "29": [
-    "page_6.jpg"
+    "csgt_cau29.jpg"
   ],
   "30": [
-    "page_7.jpg"
-  ],
-  "31": [
-    "page_7.jpg"
-  ],
-  "32": [
-    "page_7.jpg"
-  ],
-  "33": [
-    "page_7.jpg"
-  ],
-  "122": [
-    "page_24.jpg"
-  ],
-  "123": [
-    "page_24.jpg"
-  ],
-  "124": [
-    "page_24.jpg"
-  ],
-  "125": [
-    "page_24.jpg"
+    "csgt_cau30.jpg"
   ],
   "126": [
     "bien-bao_trang-24_01.jpg"

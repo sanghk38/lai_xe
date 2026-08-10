@@ -1264,7 +1264,7 @@ const QUESTIONS_DATA = [
       "Đi ở tốc độ thấp, quan sát liên tục khoảng cách từ 05 m đến 10 m phía trước để điều chỉnh sớm hướng di chuyển.",
       "Trong quá trình di chuyển không nên dùng phanh trước tránh làm khóa bánh dẫn hướng.",
       "Không được lắc người sang trái hoặc phải nhiều, trọng tâm cơ thể cần trùng với trọng tâm của xe.",
-      "Cả ba ý trên. CHƯƠNG IV. BÁO HIỆU ĐƯỜNG BỘ"
+      "Cả ba ý trên."
     ],
     "chapter": 3
   },

@@ -224,6 +224,11 @@
                         <option value="4">Chương IV - Biển báo</option>
                         <option value="5">Chương V - Sa hình</option>
                     </select>
+                    <label class="answer-toggle" title="Tự động chọn sẵn đáp án đúng khi học">
+                        <input type="checkbox" id="prefillAnswersToggle" onchange="app.togglePrefillAnswers(this.checked)">
+                        <span class="toggle-slider"></span>
+                        <span>Hiện đáp án</span>
+                    </label>
                     <button class="btn btn-sm btn-outline" onclick="app.shuffleStudy()" title="Xáo trộn câu hỏi">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
                         Xáo trộn

@@ -627,6 +627,59 @@ body {
 #study-current { color: var(--accent-primary); }
 #study-total { color: var(--text-secondary); }
 
+.answer-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 36px;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+.answer-toggle input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.toggle-slider {
+    position: relative;
+    width: 38px;
+    height: 22px;
+    border-radius: 999px;
+    background: var(--border-color);
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.toggle-slider::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: white;
+    transition: transform 0.2s ease;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.answer-toggle input:checked + .toggle-slider {
+    background: var(--success);
+}
+
+.answer-toggle input:checked + .toggle-slider::after {
+    transform: translateX(16px);
+}
+
 /* ============ Question Card ============ */
 .question-card {
     background: var(--bg-card);

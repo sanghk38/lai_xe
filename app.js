@@ -14,6 +14,7 @@ class QuizApp {
         this.studyQuestions = [...this.questions];
         this.studySelectedAnswer = null;
         this.studyAnswerChecked = false;
+        this.prefillStudyAnswers = localStorage.getItem('a1quiz-prefill-answers') === 'true';
         
         // Exam state
         this.examQuestions = [];
@@ -34,6 +35,7 @@ class QuizApp {
         this.initNavigation();
         this.initTheme();
         this.updateHomeStats();
+        this.initStudySettings();
         this.renderStudyQuestion();
         this.initKeyboardNav();
     }
@@ -192,6 +194,20 @@ class QuizApp {
         }
     }
 
+    initStudySettings() {
+        const toggle = document.getElementById('prefillAnswersToggle');
+        if (toggle) {
+            toggle.checked = this.prefillStudyAnswers;
+        }
+    }
+
+    togglePrefillAnswers(enabled) {
+        this.prefillStudyAnswers = enabled;
+        localStorage.setItem('a1quiz-prefill-answers', String(enabled));
+        this.renderStudyQuestion();
+        this.showToast(enabled ? 'Đã bật hiện đáp án đúng' : 'Đã tắt hiện đáp án đúng', 'info');
+    }
+
     // ============ Study Mode ============
     studyChapter(chapter) {
         this.switchView('study');
@@ -224,8 +240,9 @@ class QuizApp {
         if (this.studyQuestions.length === 0) return;
         
         const q = this.studyQuestions[this.studyIndex];
-        this.studySelectedAnswer = null;
-        this.studyAnswerChecked = false;
+        const correctAnswer = this.answers[q.id];
+        this.studySelectedAnswer = this.prefillStudyAnswers ? correctAnswer : null;
+        this.studyAnswerChecked = this.prefillStudyAnswers;
         
         // Update progress
         document.getElementById('study-current').textContent = `Câu ${this.studyIndex + 1}`;
@@ -254,6 +271,9 @@ class QuizApp {
         q.options.forEach((opt, i) => {
             const div = document.createElement('div');
             div.className = 'option-item';
+            if (this.prefillStudyAnswers && i === correctAnswer) {
+                div.classList.add('selected', 'correct');
+            }
             div.innerHTML = `
                 <span class="option-number">${i + 1}</span>
                 <span class="option-text">${opt}</span>
@@ -262,11 +282,18 @@ class QuizApp {
             optionsContainer.appendChild(div);
         });
         
-        // Hide explanation
-        document.getElementById('study-explanation').style.display = 'none';
+        const explanationEl = document.getElementById('study-explanation');
+        const correctText = q.options[correctAnswer] || 'Đáp án ' + (correctAnswer + 1);
+        if (this.prefillStudyAnswers) {
+            explanationEl.style.display = 'block';
+            document.getElementById('study-explanation-text').textContent =
+                `Đáp án đúng: ${correctAnswer + 1}. ${correctText}`;
+        } else {
+            explanationEl.style.display = 'none';
+        }
         
         // Update check button
-        document.getElementById('study-check').textContent = 'Kiểm tra';
+        document.getElementById('study-check').textContent = this.prefillStudyAnswers ? 'Câu tiếp theo →' : 'Kiểm tra';
         document.getElementById('study-check').disabled = false;
     }
 

@@ -39,7 +39,7 @@ const CORRECT_ANSWERS = {
     33: 0,  // Dừng lại trước vạch dừng
     34: 2,  // Không vượt quá tốc độ tối đa cho phép
     35: 1,  // Đi về bên phải theo chiều đi của mình
-    36: 0,  // Đi trên làn đường bên phải trong cùng
+    36: 1, // Äi trÃªn lÃ n ÄÆ°á»ng bÃªn trÃ¡i.
     37: 2,  // Khi xe sau xin vượt nếu đủ điều kiện an toàn
     38: 0,  // Mỗi chiều 1 làn, sang bên trái để lên trước
     39: 1,  // Không được phép vượt
@@ -73,7 +73,7 @@ const CORRECT_ANSWERS = {
     67: 3,  // Cả ba ý trên
     68: 0,  // Quan sát, giảm tốc độ hoặc dừng lại
     69: 2,  // Nhường đường cho xe đi trên đường ưu tiên/đường chính
-    70: 0,  // Nhường đường cho xe đi đến từ bên phải
+    70: 1, // NhÆ°á»ng ÄÆ°á»ng cho xe Äi Äáº¿n tá»« bÃªn trÃ¡i.
     71: 0,  // Phải nhường đường cho xe đi đến từ bên phải
     72: 1,  // Xe ưu tiên gồm xe chữa cháy, quân sự, công an...
     73: 0,  // Giảm tốc độ, đi sát lề đường bên phải hoặc dừng lại
@@ -84,12 +84,12 @@ const CORRECT_ANSWERS = {
     78: 3,  // Cả ba ý trên
     79: 0,  // Bật đèn chiếu gần; không dừng đỗ trong hầm...
     80: 3,  // Cả ba ý trên
-    81: 2,  // Cả hai ý trên
+    81: 0, // Xe phÃ­a trÆ°á»c cÃ³ tÃ­n hiá»u ráº½ trÃ¡i hoáº·c Äang ráº½ trÃ¡i hoáº·c khi xe chuy...
     82: 0,  // Giảm tốc độ, có tín hiệu rẽ phải, đi sát bên phải
     83: 0,  // Xe máy chuyên dùng tốc độ nhỏ hơn tối thiểu, xe mô tô, xe thô sơ, người đi bộ
     84: 2,  // 18 tuổi
     85: 1,  // Xe gắn máy
-    86: 2,  // Cả hai ý trên (mô tô 125cm3 và mô tô 3 bánh)
+    86: 1, // Xe mÃ´ tÃ´ ba bÃ¡nh.
     87: 0,  // Xe mô tô hai bánh dung tích đến 125 cm3
     88: 2,  // Cả hai ý trên
     89: 0,  // Phải đủ tuổi, sức khỏe, có GPLX phù hợp
@@ -99,8 +99,8 @@ const CORRECT_ANSWERS = {
     93: 0,  // Tiếp tục chịu trách nhiệm của chủ xe
     94: 0,  // 60 km/h
     95: 1,  // 50 km/h
-    96: 0,  // Ô tô chở người đến 28 chỗ, ô tô tải <= 3.5 tấn
-    97: 0,  // Ô tô chở người đến 28 chỗ, ô tô tải <= 3.5 tấn
+    96: 2, // Xe buÃ½t; Ã´ tÃ´ Äáº§u kÃ©o kÃ©o sÆ¡ mi rÆ¡ moÃ³c (trá»« Ã´ tÃ´ Äáº§u kÃ©o kÃ©o sÆ¡ m...
+    97: 2, // Xe buÃ½t; Ã´ tÃ´ Äáº§u kÃ©o kÃ©o sÆ¡ mi rÆ¡ moÃ³c (trá»« Ã´ tÃ´ Äáº§u kÃ©o kÃ©o sÆ¡ m...
     98: 0,  // Gặp biển báo nguy hiểm và cảnh báo
     99: 1,  // Quan sát, giảm tốc độ đi qua hoặc dừng lại
     100: 2, // Cả hai ý trên
@@ -131,135 +131,135 @@ const CORRECT_ANSWERS = {
     121: 3, // Cả ba ý trên
     122: 3, // Ý 1 và ý 2
     123: 2, // Quan sát an toàn phía sau cả bên trái và bên phải
-    124: 3, // Tăng ga từ từ, giảm ga từ từ
+    124: 2, // TÄng ga tá»« tá»«, giáº£m ga tháº­t nhanh.
     125: 3, // Cả ba ý trên
 
     // CHƯƠNG IV: BÁO HIỆU ĐƯỜNG BỘ (Câu 126-215)
     126: 2, // Biển 1 và biển 3
-    127: 1, // Biển 1 và biển 3
-    128: 1, // Biển 2
+    127: 0, // Biá»n 1 vÃ  biá»n 2.
+    128: 2, // Cáº£ hai biá»n.
     129: 0, // Biển 1
-    130: 0, // Không biển nào
-    131: 3, // Cả hai biển
-    132: 2, // Cả hai biển
-    133: 0, // Biển 1
-    134: 1, // Biển 1 và biển 3
+    130: 2, // Biá»n 2 vÃ  biá»n 3.
+    131: 1, // Biá»n 2.
+    132: 0, // Biá»n 1.
+    133: 1, // Biá»n 2.
+    134: 0, // Biá»n 1 vÃ  biá»n 2.
     135: 0, // Biển 1 và biển 2
-    136: 0, // Biển 1
-    137: 1, // Biển 2
+    136: 1, // Biá»n 2.
+    137: 2, // Cáº£ hai biá»n.
     138: 0, // Biển 1
     139: 1, // Biển 2
     140: 2, // Biển 1 và biển 2
-    141: 0, // Biển 1
+    141: 1, // Biá»n 2.
     142: 0, // Biển 1
-    143: 0, // Tốc độ tối đa cho phép về ban đêm 70 km/h
+    143: 1, // Tá»c Äá» tá»i thiá»u cho phÃ©p vá» ban ÄÃªm cho cÃ¡c phÆ°Æ¡ng tiá»n lÃ  70 km/h.
     144: 0, // Có
-    145: 0, // Cấm xe cơ giới đi thẳng
+    145: 1, // Cáº¥m cÃ¡c loáº¡i xe cÆ¡ giá»i vÃ  xe mÃ´ tÃ´ (trá»« xe Æ°u tiÃªn theo luáº­t Äá»nh)...
     146: 1, // Chiều dài đoạn đường cấm bóp còi
     147: 1, // Không được phép
     148: 1, // Biển 1 và biển 3
-    149: 0, // Biển 1
-    150: 1, // Cấm các loại xe cơ giới đi vào trừ loại xe ở biển phụ
+    149: 1, // Biá»n 2.
+    150: 0, // Cáº¥m cÃ¡c loáº¡i xe á» biá»n phá»¥ Äi vÃ o.
     151: 1, // Cấm dừng và đỗ xe theo hướng bên phải
     152: 0, // Biển 1
-    153: 0, // Biển 1
+    153: 1, // Biá»n 2.
     154: 0, // Tốc độ tối đa
-    155: 1, // Báo hiệu tốc độ tối thiểu
+    155: 0, // BÃ¡o hiá»u tá»c Äá» tá»i Äa cho phÃ©p cÃ¡c xe cÆ¡ giá»i cháº¡y.
     156: 0, // Biển 1
     157: 2, // Biển 3
-    158: 1, // Biển 2
+    158: 0, // Biá»n 1.
     159: 3, // Cả ba biển
     160: 0, // Biển 1
-    161: 1, // Biển 2
-    162: 2, // Biển 2 và biển 3
-    163: 0, // Biển 1 và biển 2
-    164: 3, // Biển 1 và biển 3
+    161: 2, // Biá»n 3.
+    162: 1, // Biá»n 1 vÃ  biá»n 3.
+    163: 2, // Biá»n 2 vÃ  biá»n 3.
+    164: 0, // Biá»n 1.
     165: 1, // Biển 2
-    166: 1, // Báo trước sắp đến vị trí giao cắt đường bộ với đường sắt
-    167: 1, // Biển 2
+    166: 0, // Äá» chá» nÆ¡i ÄÆ°á»ng sáº¯t giao vuÃ´ng gÃ³c vá»i ÄÆ°á»ng bá» khÃ´ng cÃ³ rÃ o...
+    167: 2, // Biá»n 3.
     168: 1, // Biển 1 và biển 3
-    169: 0, // Biển 1
-    170: 1, // Biển 2
+    169: 1, // Biá»n 2.
+    170: 2, // Biá»n 3.
     171: 0, // Biển 1
-    172: 0, // Biển 1
-    173: 0, // Biển 1
-    174: 1, // Biển 2
-    175: 0, // Biển 1
-    176: 1, // Biển 2
-    177: 0, // Biển 1
+    172: 1, // Biá»n 2.
+    173: 1, // Biá»n 2.
+    174: 2, // Biá»n 3.
+    175: 2, // Biá»n 3.
+    176: 2, // Biá»n 3.
+    177: 1, // Biá»n 2.
     178: 1, // Biển 2
-    179: 2, // Cả ba biển
+    179: 1, // Biá»n 2 vÃ  biá»n 3.
     180: 1, // Biển 2
     181: 1, // Biển 2
-    182: 0, // Biển 1
+    182: 1, // Biá»n 2.
     183: 1, // Biển 2
-    184: 0, // Biển 1
-    185: 1, // Biển 2
+    184: 1, // Biá»n 2.
+    185: 0, // Biá»n 1.
     186: 1, // Báo hiệu đường có gồ giảm tốc
     187: 0, // Báo trước đất đá sụt lở bất ngờ
-    188: 0, // Biển 1
-    189: 1, // Biển 2
+    188: 2, // Cáº£ hai biá»n.
+    189: 0, // Biá»n 1.
     190: 1, // Biển báo hiệu số lượng làn đường và hướng đi
-    191: 1, // Biển 2
+    191: 2, // KhÃ´ng biá»n nÃ o.
     192: 0, // Biển 1
-    193: 0, // Biển 1
+    193: 1, // Biá»n 2.
     194: 0, // Biển 1
-    195: 1, // Biển 2
-    196: 0, // Biển 1
+    195: 2, // Biá»n 3.
+    196: 3, // Biá»n 2 vÃ  biá»n 3.
     197: 1, // Biển 2
-    198: 0, // Biển 1
-    199: 3, // Biển 1 và biển 3
-    200: 2, // Biển 2 và biển 3
+    198: 2, // Biá»n 3.
+    199: 0, // Biá»n 1.
+    200: 0, // Biá»n 1 vÃ  biá»n 2.
     201: 2, // Biển chỉ dẫn khu vực đỗ xe
     202: 0, // Biển 1
     203: 1, // Biển 2
-    204: 0, // Biển 1
+    204: 1, // Biá»n 2.
     205: 2, // Phải giảm tốc độ đến mức an toàn
     206: 0, // Bắt buộc
     207: 2, // Biển 1 và biển 3
     208: 2, // Báo hiệu cầu vượt liên thông
-    209: 2, // Biển 2 và biển 3
+    209: 0, // Biá»n 1 vÃ  biá»n 2.
     210: 0, // Chỉ dẫn khoảng cách đến làn đường cứu nạn
     211: 0, // Được phép chuyển sang làn khác
-    212: 0, // Biển 1
+    212: 1, // Biá»n 2.
     213: 1, // Chỉ dẫn hướng rẽ
-    214: 0, // Vạch 1
-    215: 0, // Vạch 1
+    214: 2, // Váº¡ch 3.
+    215: 1, // Váº¡ch 2.
 
     // CHƯƠNG V: SA HÌNH VÀ XỬ LÝ TÌNH HUỐNG (Câu 216-250)
-    216: 1, // Xe tải, xe mô tô
+    216: 2, // Chá» xe con.
     217: 0, // Xe tải, xe khách, xe con, xe mô tô
-    218: 2, // Xe mô tô, xe con, xe tải
+    218: 0, // Xe táº£i, xe con, xe mÃ´ tÃ´.
     219: 1, // Xe con
-    220: 1, // Xe cứu thương đi làm nhiệm vụ cấp cứu
+    220: 0, // Xe mÃ´ tÃ´.
     221: 0, // Xe con và xe khách
     222: 1, // Xe con, xe tải
-    223: 0, // Xe khách, xe tải, xe mô tô
-    224: 2, // Xe mô tô, xe tải, xe khách, xe con
-    225: 2, // Cả ba xe
+    223: 2, // Xe khÃ¡ch, xe con, xe mÃ´ tÃ´.
+    224: 0, // Xe khÃ¡ch, xe táº£i, xe mÃ´ tÃ´, xe con.
+    225: 0, // Xe táº£i.
     226: 0, // Cả ba hướng
-    227: 3, // Chỉ xe tải vi phạm
-    228: 3, // Chỉ xe mô tô và xe tải
+    227: 2, // Chá» xe mÃ´ tÃ´ vi pháº¡m.
+    228: 2, // Cáº£ ba xe.
     229: 0, // Xe con
     230: 0, // Xe con (A), xe mô tô, xe con (B), xe đạp
-    231: 1, // Xe con
-    232: 3, // Xe con và xe mô tô
+    231: 0, // Xe mÃ´ tÃ´.
+    232: 2, // Xe con.
     233: 2, // Tất cả phải dừng lại, trừ xe đã trong ngã tư
-    234: 3, // Cả ba xe
+    234: 2, // Xe mÃ´ tÃ´, xe táº£i.
     235: 1, // Tất cả các loại xe
     236: 2, // Hướng 1 và 3
-    237: 0, // Xe công an, xe quân sự, xe con + xe mô tô
-    238: 1, // Xe tải (A), xe mô tô (D)
-    239: 0, // Xe con (B), xe mô tô (C)
+    237: 1, // Xe quÃ¢n sá»± Äi lÃ m nhiá»m vá»¥ kháº©n cáº¥p, xe cÃ´ng an Äi lÃ m nhiá»m vá»¥ khá...
+    238: 2, // Xe khÃ¡ch (B), xe mÃ´ tÃ´ (C).
+    239: 2, // Xe con (E), xe mÃ´ tÃ´ (D).
     240: 2, // Xe con, xe tải
     241: 1, // Không được vượt
-    242: 0, // Xe mô tô
-    243: 2, // Xe con, xe tải
-    244: 3, // Cả bốn xe
-    245: 0, // Xe tải, xe mô tô
+    242: 3, // Cáº£ hai xe. CÃ¢u 243 . CÃ¡c xe Äi theo hÆ°á»ng mÅ©i tÃªn, xe nÃ o vi pháº¡m quy táº¯...
+    243: 0, // Xe con.
+    244: 0, // Xe con, xe táº£i, xe khÃ¡ch.
+    245: 1, // Xe khÃ¡ch, xe mÃ´ tÃ´.
     246: 2, // Xe mô tô, xe con, xe của bạn
-    247: 0, // Xe của bạn, xe mô tô, xe con
-    248: 1, // Xe mô tô, xe đạp, xe của bạn
+    247: 2, // Xe mÃ´ tÃ´, xe con, xe cá»§a báº¡n.
+    248: 2, // Xe Äáº¡p, xe mÃ´ tÃ´, xe cá»§a báº¡n.
     249: 0, // Xe con
     250: 1, // Giảm tốc độ chờ xe container rẽ xong rồi tiếp tục đi
 };

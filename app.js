@@ -102,7 +102,7 @@ class QuizApp {
         
         // Special handling
         if (view === 'home') this.updateHomeStats();
-        if (view === 'answers') this.renderAnswerStudyList();
+        if (view === 'answers') requestAnimationFrame(() => this.renderAnswerStudyList());
         if (view === 'stats') this.updateStats();
         
         // Scroll to top

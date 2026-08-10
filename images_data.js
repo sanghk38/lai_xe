@@ -306,108 +306,108 @@ const QUESTION_IMAGES = {
     "bien-bao_trang-51_04.png"
   ],
   "216": [
-    "page_52.jpg"
+    "sa-hinh_trang-52_02.jpg"
   ],
   "217": [
-    "page_52.jpg"
+    "sa-hinh_trang-52_01.jpg"
   ],
   "218": [
-    "page_52.jpg"
+    "sa-hinh_trang-53_01.jpg"
   ],
   "219": [
-    "page_53.jpg"
+    "sa-hinh_trang-53_02.jpg"
   ],
   "220": [
-    "page_53.jpg"
+    "sa-hinh_trang-54_01.jpg"
   ],
   "221": [
-    "page_54.jpg"
+    "sa-hinh_trang-54_02.jpg"
   ],
   "222": [
-    "page_54.jpg"
+    "sa-hinh_trang-55_01.jpg"
   ],
   "223": [
-    "page_55.jpg"
+    "sa-hinh_trang-52_02.jpg"
   ],
   "224": [
-    "page_55.jpg"
+    "sa-hinh_trang-56_01.jpg"
   ],
   "225": [
-    "page_56.jpg"
+    "sa-hinh_trang-56_02.jpg"
   ],
   "226": [
-    "page_57.jpg"
+    "sa-hinh_trang-57_01.jpg"
   ],
   "227": [
-    "page_57.jpg"
+    "sa-hinh_trang-57_02.jpg"
   ],
   "228": [
-    "page_57.jpg"
+    "sa-hinh_trang-58_01.jpg"
   ],
   "229": [
-    "page_58.jpg"
+    "sa-hinh_trang-58_02.jpg"
   ],
   "230": [
-    "page_58.jpg"
+    "sa-hinh_trang-59_01.jpg"
   ],
   "231": [
-    "page_59.jpg"
+    "sa-hinh_trang-59_02.jpg"
   ],
   "232": [
-    "page_60.jpg"
+    "sa-hinh_trang-60_01.jpg"
   ],
   "233": [
-    "page_60.jpg"
+    "sa-hinh_trang-60_02.jpg"
   ],
   "234": [
-    "page_61.jpg"
+    "sa-hinh_trang-61_01.jpg"
   ],
   "235": [
-    "page_61.jpg"
+    "sa-hinh_trang-61_02.jpg"
   ],
   "236": [
-    "page_62.jpg"
+    "sa-hinh_trang-62_02.jpg"
   ],
   "237": [
-    "page_62.jpg"
+    "sa-hinh_trang-62_01.jpg"
   ],
   "238": [
-    "page_63.jpg"
+    "sa-hinh_trang-63_01.jpg"
   ],
   "239": [
-    "page_63.jpg"
+    "sa-hinh_trang-63_02.jpg"
   ],
   "240": [
-    "page_64.jpg"
+    "sa-hinh_trang-64_02.jpg"
   ],
   "241": [
-    "page_64.jpg"
+    "sa-hinh_trang-64_01.jpg"
   ],
   "242": [
-    "page_64.jpg"
+    "sa-hinh_trang-65_02.jpg"
   ],
   "243": [
-    "page_65.jpg"
+    "sa-hinh_trang-65_01.jpg"
   ],
   "244": [
-    "page_65.jpg"
+    "sa-hinh_trang-66_02.jpg"
   ],
   "245": [
-    "page_66.jpg"
+    "sa-hinh_trang-66_01.jpg"
   ],
   "246": [
-    "page_66.jpg"
+    "sa-hinh_trang-67_01.jpg"
   ],
   "247": [
-    "page_67.jpg"
+    "sa-hinh_trang-67_02.jpg"
   ],
   "248": [
-    "page_67.jpg"
+    "sa-hinh_trang-68_01.jpg"
   ],
   "249": [
-    "page_68.jpg"
+    "sa-hinh_trang-68_02.jpg"
   ],
   "250": [
-    "page_68.jpg"
+    "sa-hinh_trang-69_01.jpg"
   ]
 };
